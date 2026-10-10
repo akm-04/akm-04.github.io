@@ -1,0 +1,163 @@
+.skills-intro { 
+  grid-area: intro; 
+}
+#experience { 
+   grid-area: exp; 
+}
+.github-sidebar { 
+  grid-area: github; 
+}
+#front-end { 
+  grid-area: front; 
+}
+#back-end { 
+  grid-area: back; 
+}
+#other-skills{ 
+  grid-area: other; 
+}
+
+/* Override the common.css's main styling and turn it into a grid */
+main.main-grid {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 40px auto; 
+    
+    grid-template-areas: 
+        "intro intro"
+        "exp   github"
+        "exp   back"
+        "front back"
+        "other other";
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    main.main-grid {
+        grid-template-columns: 1fr; /* Stacks everything in one column */
+        grid-template-areas: 
+            "intro"
+            "github"
+            "exp"
+            "front"
+            "back"
+            "other";
+    }
+}
+
+.skills-intro, .skill-group {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+.skill-group h2 {
+  font-size: 1.5rem;
+}
+
+.skills-intro h1 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+/* Skill Badges */
+.skill-badges {
+    list-style-type: none; /* Removes the bullet points */
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-badges li {
+    background-color: rgba(41, 128, 185, 0.1); 
+    color: #2980b9;
+    font-size: 0.95rem;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid rgba(41, 128, 185, 0.3);
+    margin: 0; /* Overrides the li margin from common.css */
+}
+
+#experience .skill-badges {
+    flex-direction: column; /* Stacks the experience bullet points vertically */
+}
+#experience .skill-badges li {
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-weight: normal;
+    padding: 0;
+    border-radius: 0;
+    margin-bottom: 0.8rem;
+}
+
+/* Github Sidebar */
+.github-skills-container {
+    background-color: #0d1117; 
+    color: #c9d1d9; 
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+.github-skills-container h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.progress-bar {
+    display: flex; 
+    height: 10px; 
+    width: 100%;
+    border-radius: 6px; 
+    overflow: hidden; 
+    margin-bottom: 1rem;
+    background-color: #333; 
+}
+
+.segment { height: 100%; }
+
+#java-bar { background-color: #b07219; width: 55%; }
+#python-bar { background-color: #3572A5; width: 25%; }
+#shell-bar { background-color: #89e051; width: 15%; }
+#html-css-bar { background-color: #e34c26; width: 5%; }
+
+#java-dot { background-color: #b07219; }
+#python-dot { background-color: #3572A5; }
+#shell-dot { background-color: #89e051; }
+#html-css-dot { background-color: #e34c26; }
+
+.legend {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 15px; 
+    font-size: 0.9rem;
+    font-weight: 600;
+    list-style-type: none;
+}
+
+.legend li { 
+    display: flex; 
+    align-items: center; 
+    color: #c9d1d9; 
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%; 
+    margin-right: 8px;
+}
