@@ -1,0 +1,81 @@
+/* --- Assigning Grid Areas --- */
+.qmul-text { 
+    grid-area: qmul-text; 
+}
+.qmul-image { 
+    grid-area: qmul-image; 
+}
+.alevel-text {
+    grid-area: alevel-text; 
+}
+.alevel-image { 
+    grid-area: alevel-image; 
+}
+.olevel-text { 
+    grid-area: olevel-text; 
+}
+.IELTS-image { 
+    grid-area: olevel-image; 
+}
+
+/* --- The Master Grid --- */
+.education-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 40px;
+    align-items: center; /* Vertically centers the text with the image */
+    max-width: 1100px;
+    margin: 40px auto; 
+    
+    /* The Zig-Zag layout*/
+    grid-template-areas: 
+        "qmul-text    qmul-image"
+        "alevel-image alevel-text"
+        "olevel-text  olevel-image";
+}
+
+@media (max-width: 768px) {
+    .education-grid {
+        grid-template-columns: 1fr; 
+        grid-template-areas: 
+            "qmul-image"
+            "qmul-text"
+            "alevel-image"
+            "alevel-text"
+            "olevel-image"
+            "olevel-text";
+    }
+}
+
+/* --- Targeting the figures --- */
+.education-grid figure {
+    text-align: center;
+    margin: 0;
+}
+
+.education-grid img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    border: 5px solid grey;
+}
+
+.education-grid figcaption {
+    margin-top: 0.8rem;
+    font-weight: bold;
+    color: #444;
+    background-color: rgba(255,255,255,0.9);
+    padding: 0.5rem;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.img img:hover{
+    border-color: goldenrod;
+    /* QMUL Gold */
+    transform: scale(1.05);
+    /* Slightly enlarge the image */
+    cursor: zoom-in;
+}

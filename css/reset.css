@@ -1,0 +1,7 @@
+html, body, div, span, h1, h2, h3, p, a, img, figure, figcaption, 
+header, nav, article, section, aside, footer, form, label, input, button, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}

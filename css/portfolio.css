@@ -1,0 +1,90 @@
+/* override main attributes from common.css */
+main.portfolio-grid {
+    background-color: transparent; 
+    box-shadow: none;
+    padding: 0;
+    
+    /* Turn it into the Auto-Fit Grid */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 30px;
+    max-width: 1300px;
+    margin: 3rem auto;
+}
+
+/* INDIVIDUAL PROJECT CARDS */
+.project-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+
+    /* Flexbox to control the inside of the card */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Float up effect on hover */
+.project-card:hover {
+    transform: scale(1.05);
+    /* Slightly enlarge the image */
+    cursor: zoom-in;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 10px;
+    border: 3px solid #ccc;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+
+
+/* Tech Tags & Buttons */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 1.2rem 0;
+}
+
+.tech-tags span {
+    background-color: rgba(44, 62, 80, 0.1);
+    color: #2c3e50;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(44, 62, 80, 0.2);
+}
+
+.repo-link {
+    display: inline-block;
+    background-color: #2980b9;
+    color: white; 
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    
+    /* Spacing */
+    margin-right: 5px; 
+    margin-bottom: 5px;
+}
+
+.repo-link:hover {
+    background-color: #f39c12;
+    text-decoration: none;
+    color: white
+}

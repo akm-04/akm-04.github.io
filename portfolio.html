@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet"> 
+    
+    <link rel="stylesheet" href="css/default_style.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    
+    <title>AKM's Portfolio</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>AKM Abrar Islam</h1>
+            <img src="images/logo.png" alt="QMUL Logo" width="100">
+            <h3>Computer Science Student @ QMUL</h3>
+            <hr>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        </ul>
+    </nav>
+    
+    <main class="portfolio-grid">
+        
+        <article class="project-card">
+            <img src="images/s23u.jpeg" alt="Galaxy S23 Ultra">
+            <h3>Galaxy S23 Ultra Custom Kernel (SM8550)</h3>
+            <hr>
+            <p>Maintained a forked SM8550 Android kernel for the Galaxy S23 Ultra, tracking stock/CLO and AOSP upstream changes and selectively cherry-picking useful community commits. Extended the Bash build script to automate compilation and optional KernelSU, KernelSU-Next, SukiSU-Ultra, APatch and SUSFS integration.</p>
+            <div class="tech-tags">
+                <span>Bash Scripting</span>
+                <span>Linux Kernel</span>
+                <span>Advanced Git</span>
+                <span>C</span>
+            </div>
+            <a href="https://github.com/akm-04/Samsung_kernel_sm8550-common_Upstream" target="_blank" class="repo-link">View on GitHub</a>
+        </article>
+
+        <article class="project-card">
+            <img src="images/un1ca.png" alt="Un1ca Rom Build System">
+            <h3>Galaxy S23 Bootloader Downgrade Bypass</h3>
+            <hr>
+            <p>Documented a method for running an older One UI release without downgrading the device's fused bootloader. Adapted the UN1CA firmware repacking workflow, adjusted fstab and device-specific components, and combined compatible newer vendor blobs where required to boot the older system while keeping the newer bootloader.</p>
+            <div class="tech-tags">
+                <span>Android OS</span>
+                <span>Firmware Modding</span>
+                <span>Scripting</span>
+            </div>
+            <a href="https://github.com/akm-04/UN1CA" target="_blank" class="repo-link">View on GitHub</a>
+            <a href="https://xdaforums.com/t/downgrading-oneui-version-without-downgrading-bootloader.4746664/" target="_blank" class="repo-link">View XDA Post</a>
+        </article>
+
+        <article class="project-card">
+            <img src="images/nethunter.jpeg" alt="Kali Nethunter">
+            <h3>Tab S8 Ultra Monolithic NetHunter Kernel</h3>
+            <hr>
+            <p>Built and maintained custom Galaxy Tab S8 kernel trees from Samsung Open Source and CodeLinaro sources across multiple Android releases. Developed de-GKI/monolithic variants by integrating Samsung and Qualcomm vendor drivers and porting community patches, with NetHunter-oriented builds adding wireless/USB support and container-related functionality.</p>
+            <div class="tech-tags">
+                <span>Monolithic Kernel</span>
+                <span>Cybersecurity</span>
+                <span>C</span>
+            </div>
+            <a href="https://github.com/akm-04/Samsung_Kernel_sm8450_common_gts8x" target="_blank" class="repo-link">View on GitHub</a>
+            <a href="https://xdaforums.com/t/kernelsu-kernel-for-galaxy-tab-s8-series.4754125/" target="_blank" class="repo-link">View XDA Post</a>
+
+        </article>
+
+        <article class="project-card">
+            <img src="images/TWRP.png" alt="TWRP Custom Recovery">
+            <h3>TWRP Device Tree: Tab S8 Ultra</h3>
+            <hr>
+            <p>Created a TWRP 12.1 device tree for the Galaxy Tab S8 Ultra after the previously available public source was removed. Configured the device-specific recovery, Android build and kernel integration files, then built and tested recovery images on physical hardware.</p>
+            <div class="tech-tags">
+                <span>Device Tree</span>
+                <span>Recovery Environment</span>
+                <span>SELinux</span>
+            </div>
+            <a href="https://github.com/akm-04/TWRP_Devicetree_gts8u" target="_blank" class="repo-link">View on GitHub</a>
+        </article>
+
+        <article class="project-card">
+            <img src="images/pocof3.png" alt="Poco F3">
+            <h3>Poco F3 Kali NetHunter & Custom Kernels</h3>
+            <hr>
+            <p>Maintained early custom-kernel forks for the Poco F3 (pre-GKI Linux 4.19), integrating KernelSU and Kali NetHunter-related patches. Worked with Kconfig, Makefiles and defconfig changes to build and test kernels with additional wireless-adapter functionality.</p>
+            <div class="tech-tags">
+                <span>Kali NetHunter</span>
+                <span>Makefiles</span>
+                <span>Cybersecurity</span>
+            </div>
+            <a href="https://github.com/akm-04/InfiniR_Nethunter_alioth" target="_blank" class="repo-link">View on GitHub</a>
+        </article>
+
+        <article class="project-card">
+            <img src="images/totolink.jpeg" alt="Custom OpenWrt Build">
+            <h3>Totolink X5000R Custom OpenWrt Firmware</h3>
+            <hr>
+
+            <p>Diagnosed a boot-looping TOTOLINK X5000R through UART serial logs and identified an unsupported Zbit SPI-NOR flash chip. Recovered the router through U-Boot and TFTP/initramfs, then built and tested patched OpenWrt images with the required flash-chip support and documented the recovery process.</p>
+            <div class="tech-tags">
+                <span>OpenWrt</span>
+                <span>Hardware Debugging (UART)</span>
+                <span>Networking</span>
+            </div>
+            <a href="https://github.com/akm-04/Openwrt-23.05_Totolink-x5000r_Zbit-Support" target="_blank" class="repo-link">View on GitHub</a>
+        </article>
+
+        <article class="project-card">
+            <img src="images/ax53.jpg" alt="TP-Link Archer AX53 Firmware Toolkit">
+            <h3>TP-Link Archer AX53 Firmware Toolkit</h3>
+            <hr>
+            <p>Adapted an existing router-firmware toolkit for the Archer AX53's UBI/UBIFS flash layout, modifying its unpack and repack workflow for the device-specific firmware structure. Built and tested a QEMU/chroot environment that runs vendor ARM utilities to work with encrypted stock firmware while emulating the router's userspace.</p>
+            <div class="tech-tags">
+                <span>UBI/UBIFS</span>
+                <span>Embedded Linux</span>
+                <span>QEMU/chroot</span>
+            </div>
+            <a href="https://github.com/akm-04/tp-link-ax53-fw-hacks" target="_blank" class="repo-link">View on GitHub</a>
+            <a href="https://forum.openwrt.org/t/add-support-for-tp-link-ax55-v1/158384/44" target="_blank" class="repo-link">View Forum Post</a>
+        </article>
+
+        <article class="project-card">
+            <img src="images/raxtoolkit.jpeg" alt="Netgear RAX120v2 Firmware Toolkit">
+            <h3>Netgear RAX120v2 Firmware Toolkit</h3>
+            <hr>
+            <p>Built a Linux-based toolkit for unpacking, modifying and rebuilding Netgear RAX120v2 stock firmware while preserving the vendor image structure required for installation through the stock web interface. Integrated Netgear/QSDK-derived utilities into repeatable scripts for root-filesystem extraction, repacking and validation.</p>
+            <div class="tech-tags">
+                <span>Embedded Firmware</span>
+                <span>Bash</span>
+                <span>QSDK</span>
+            </div>
+            <a href="https://github.com/akm-04/rax120v2-fw-toolkit" target="_blank" class="repo-link">View on GitHub</a>
+        </article>
+
+        <article class="project-card">
+            <img src="images/rax120.jpeg" alt="NSS OpenWrt Firmware">
+            <h3>Netgear RAX120v2 NSS OpenWrt Firmware</h3>
+            <hr>
+            <p>Maintained a custom OpenWrt build for the Netgear RAX120v2 with Qualcomm NSS hardware acceleration and device-specific fixes for wireless calibration and Aquantia Ethernet firmware. Added fan-control automation to scale cooling behaviour based on reported thermal readings.</p>
+            <div class="tech-tags">
+                <span>OpenWrt</span>
+                <span>Hardware Acceleration</span>
+                <span>Bash</span>
+            </div>
+            <a href="https://github.com/akm-04/OpenWrt-NSS" target="_blank" class="repo-link">View on GitHub</a>
+            <a href="https://forum.openwrt.org/t/adding-openwrt-support-for-netgear-rax120-nighthawk-ax12/75592/537" target="_blank" class="repo-link">View Forum Post</a>
+        </article>
+
+    </main>
+
+    <footer>
+        <nav>
+            <a href="index.html">Home</a> | 
+            <a href="https://www.qmul.ac.uk/eecs/" target="_blank">QMUL EECS</a>
+        </nav>
+        <hr>
+        <p>Copyright &copy; 2026 AKM Abrar Islam</p>
+    </footer>
+
+</body>
+</html>
